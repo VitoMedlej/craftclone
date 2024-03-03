@@ -46,7 +46,7 @@ export default function Review({setActiveStep}:{setActiveStep:any}) {
 
  
   
-  const products = loadState('shping-list')
+  const products = loadState('lista-shp')
  
   const info = loadState('order-bag')
   

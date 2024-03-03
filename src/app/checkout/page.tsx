@@ -84,7 +84,7 @@ function getStepContent(step: number,setInfo:any,handleChange:any,info:any,setAc
 
 
     const saveOrder = async () => {
-      const products = loadState('shping-list')
+      const products = loadState('lista-shp')
  
 
       const total= totalCal(products) || 0; 
@@ -105,14 +105,14 @@ function getStepContent(step: number,setInfo:any,handleChange:any,info:any,setAc
   saveState('order-bag',null)
   setDiscountedPrice(0)
   setpromoCode(null)
-  saveState('shping-list',null)
+  saveState('lista-shp',null)
 
 }
   }
 
   const handlePromoChange = async (code:string) => {
     console.log('code: ', code);
-    const cartItems = loadState('shping-list')
+    const cartItems = loadState('lista-shp')
     const total= totalCal(cartItems) || 0; 
     console.log('total: ', total);
         if (!code || `${code}`?.length < 3 || !cartItems) {

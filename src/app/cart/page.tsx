@@ -73,7 +73,7 @@ const Cart = () => {
 
     console.log('total: ', total);
     const router = useRouter()
-    let localCart : ICartItem[] = loadState('shping-list') || []
+    let localCart : ICartItem[] = loadState('lista-shp') || []
 
     useEffect(() => {
         if (localCart) {
@@ -91,7 +91,7 @@ const Cart = () => {
     const refetchState = () => {
         // let localCart : ICartItem[] = loadState('userbag') || []
 
-        setCartItems(loadState('shping-list'))
+        setCartItems(loadState('lista-shp'))
         
     }
     const handlePromoChange = async () => {
@@ -133,7 +133,7 @@ const Cart = () => {
         }
     const remove = (id:string) => {
         let state = cartItems.filter(x => `${x._id}` !== id);
-         saveState('shping-list', state);
+         saveState('lista-shp', state);
          setCartItems(state);
          setpromoCode(null)
 

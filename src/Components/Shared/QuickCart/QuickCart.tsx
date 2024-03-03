@@ -18,7 +18,7 @@ export default function QuickCart() {
         setCartOpen} = useCartContext();
         const [cartItems,setCartItems] = useState<ICartItem[]>([])
         useEffect(() =>{
-            let localCart : ICartItem[] = loadState('shping-list') || []
+            let localCart : ICartItem[] = loadState('lista-shp') || []
             if (localCart) {
                 
                 setCartItems(localCart)
@@ -34,7 +34,7 @@ export default function QuickCart() {
     };
     const remove = (_id:string) => {
        let state = cartItems.filter(x => `${x._id}` !== _id);
-        saveState('shping-list', state);
+        saveState('lista-shp', state);
         setCartItems(state);
     }
     return (

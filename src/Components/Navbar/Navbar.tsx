@@ -48,7 +48,7 @@ export default function Navbar() {
     // const localCart = [1]
     useEffect(() => {
         const cart : any = []
-        // const cart = loadState('shping-list') || []
+        // const cart = loadState('lista-shp') || []
         if (cart) {
 
             setLocalCart(cart)

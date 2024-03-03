@@ -30,7 +30,7 @@ export async function POST(req : NextRequest, res : NextApiResponse) {
       
     if(isSameUser) {
        const token = await jwt.sign({ id:selectedUser._id,name:selectedUser.name,
-        email:selectedUser.email }, `241oi2j4oic9jcjzncxmbcnbcbcbcbcqjwhuiu9828941u1892zklsfojghgwquif-0qw0-olflfvmamsfklsanmiofqwrquwnv`,{ expiresIn: '94h' });
+        email:selectedUser.email }, `215135125125sfclkn1io5vn12io5n1o2coi12n5oc1b2oi5bv12io5b-0qw0-olflfvmamsfklsanmiofqwrquwnv`,{ expiresIn: '94h' });
        if (!token) {throw 'Error generating token'}
        return NextResponse.json({success:true, authorized: true,jwt: token,user:{name : selectedUser.name ,email}});
 
