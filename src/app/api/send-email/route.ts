@@ -55,7 +55,7 @@ export  async function GET(req: NextRequest, res: NextApiResponse) {
         
         // sendEmail();
         const info = await transporter.sendMail({
-            from: '"The Craft Room" <sales@thecraftroom-lb.com>', // sender address
+            from: '"The Craft Room" <email@gmail.com>', // sender address
             to: "vito.medlej@gmail.com", // list of receivers
             subject: "Order Placement Email Testing", // Subject line
             text: "Order Placement Email Testing", // plain text body
@@ -124,7 +124,7 @@ export  async function GET(req: NextRequest, res: NextApiResponse) {
                 </div>
             </body>
             <footer>
-            <p>Contact us at: <a href="mailto:sales@thecraftroom-lb.com">sales@thecraftroom-lb.com</a></p>
+            <p>Contact us at: <a href="mailto:email@gmail.com">email@gmail.com</a></p>
             <p>Whatsapp: +961 03874743</p>
           </footer>
             </html>

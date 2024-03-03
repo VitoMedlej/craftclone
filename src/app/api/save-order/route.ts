@@ -11,12 +11,12 @@ import { PromoType } from '../use-promo/route';
 import { ObjectId } from 'mongodb';
 
 const transporter = nodemailer.createTransport({
-    host: "mail.smtp2go.com",
-    port: 465,
+    host: "host",
+    port: 1234,
     secure: true,
     auth: {
-        user: "onbeirut.com",
-        pass: "USFV39btW1WeRFMm",
+        user: "",
+        pass: "",
     },
 });
 
@@ -24,7 +24,7 @@ const transporter = nodemailer.createTransport({
 async function increaseUsageCountPromo(code:PromoType) {
     try{
     // Update usageCount in MongoDB
-    const Codes = await client.db('CRAFT').collection('Coupons');
+    const Codes = await client.db('DATABASE').collection('Coupons');
     const res =  await Codes.updateOne(
         // { _id: new ObjectId(code._id) },
         { code },
@@ -181,7 +181,7 @@ async function increaseUsageCountPromo(code:PromoType) {
     <img
     style="width:100px;height:100px"
         class='img contain'
-        src="https://ucarecdn.com/9f0e31cb-bce5-49f5-96bf-40e579295a42/LOGO71.png"
+        src=""
         alt="the craft room logo"/> 
 </div>
                 <h1>The Craft Room</h1>
@@ -247,7 +247,7 @@ async function increaseUsageCountPromo(code:PromoType) {
         <footer>
         <br />
         <div style='text-align:center;align-items:center;margin:0 auto;'>
-        <p><a href="mailto:sales@thecraftroom-lb.com">sales@thecraftroom-lb.com</a></p>
+        <p><a href="mailto:email@gmail.com">email@gmail.com</a></p>
         <p style='padding-top:2px;padding-bottom:2px;'>+961 03874743</p>
         <p><a href="https://thecraftroom-lb.com/unsubscribe">unsubscribe</a></p>
         </div>
@@ -256,7 +256,7 @@ async function increaseUsageCountPromo(code:PromoType) {
 
         // Send the email
         const info = await transporter.sendMail({
-            from: '"The Craft Room" <sales@thecraftroom-lb.com>',
+            from: '"The Craft Room" <email@gmail.com>',
             to: toEmail,
             subject: "Thank You For Your Order!",
             html: htmlContent,
@@ -283,8 +283,8 @@ let discountedPrice = order?.discountedPrice || 0
   if (req.method === 'POST') {
     // Process a POST request
     if (!order || !order?.info?.email) return NextResponse.json({success:false})
-       const insertReq = await client.db("CRAFT").collection("Orders").insertOne({...order,orderID: `${orderId}`});
-        await client.db("CRAFT").collection("OrdersBACKUP").insertOne({...order,orderID: `${orderId}`});
+       const insertReq = await client.db('DATABASE').collection("Orders").insertOne({...order,orderID: `${orderId}`});
+        await client.db('DATABASE').collection("OrdersBACKUP").insertOne({...order,orderID: `${orderId}`});
        if (insertReq.acknowledged ) {         
         if (order?.promoCode ) {
 

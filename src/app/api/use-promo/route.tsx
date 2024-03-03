@@ -14,7 +14,7 @@ export async function POST(req: NextRequest, res: NextApiResponse) {
     }
 
     // Check promo code validity
-    const Codes = await client.db('CRAFT').collection('Coupons');
+    const Codes = await client.db('DATABASE').collection('Coupons');
     const retrievedCode = await Codes.findOne({ code: order.code });
     console.log('retrievedCode: ', retrievedCode);
 
