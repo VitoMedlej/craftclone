@@ -18,7 +18,7 @@ const Footer = () => (
               {/* <a><h1 className="site-logo"><Logo />E-Shop</h1></a> */}
               {/* https://res.cloudinary.com/dwxm8f25f/image/upload/v1675357773/logo_ghli5e.jpg */}
               {/* https://res.cloudinary.com/dwxm8f25f/image/upload/v1675713948/logo_sktnut_1_jwy2hk.png */}
-            <img className='img ' src='https://ucarecdn.com/9f0e31cb-bce5-49f5-96bf-40e579295a42/LOGO71.png' alt="the craft room Logo" />
+            <img className='img ' src='uploadcarecdn9f0e31cb-bce5-49f5-96bf-40e579295a42/LOGO71.png' alt="the craft room Logo" />
             </Link>
           </div>
           <Typography component='h1' sx={{ fontSize: '.9em',color:"2b2b2b" }}  className='footer-p '>
@@ -73,7 +73,7 @@ const Footer = () => (
                         </Box>
                         <Box sx={{width:'80px',ml:2}}>
 
-<img src="https://ucarecdn.com/a8afd824-ff38-4683-b789-e0868f7242f7/WU.png" alt="Western Union Money Payment method logo" className="img contain" />
+<img src="uploadcarecdna8afd824-ff38-4683-b789-e0868f7242f7/WU.png" alt="Western Union Money Payment method logo" className="img contain" />
 </Box>
                         </Box>
                     </Box>

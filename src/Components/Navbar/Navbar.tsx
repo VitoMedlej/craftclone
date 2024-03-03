@@ -116,7 +116,7 @@ export default function Navbar() {
 }}>
     <img
         className='img contain'
-        src={`https://ucarecdn.com/9f0e31cb-bce5-49f5-96bf-40e579295a42/LOGO71.png`}
+        src={`uploadcarecdn9f0e31cb-bce5-49f5-96bf-40e579295a42/LOGO71.png`}
         alt="the craft room logo"/> 
 </Box>
 </Link>
